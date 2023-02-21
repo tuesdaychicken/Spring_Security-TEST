@@ -17,7 +17,8 @@ public class CustomNoOpPasswordEncoder implements PasswordEncoder{
 	@Override
 	public boolean matches(CharSequence rawPassword, String encodedPassword) {
 		// TODO Auto-generated method stub
-		return false;
+		log.info("matches: " + rawPassword +":"+encodedPassword);
+		return rawPassword.toString().equals(encodedPassword);
 	}
 
 }
